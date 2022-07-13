@@ -10,11 +10,12 @@ int	main(int argc, char **argv){
 		{
 			std::string input(argv[i]);
 			for (std::size_t j = 0; j < input.length(); j++)
-				str += std::toupper(input[j]);
+				str += toupper(input[j]);
 		}
 	}
 	else
 		str = MEGAPHONE_MSG;
 	std::cout << str << std::endl;
+
 	return (0);
 }
