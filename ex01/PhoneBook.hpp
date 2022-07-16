@@ -1,5 +1,4 @@
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#pragma once
 
 #define MAX 8
 
@@ -18,5 +17,3 @@ class PhoneBook {
 		void	updateContact(const Contact &contact);
 		void	printPhoneBook(void);
 };
-
-#endif
