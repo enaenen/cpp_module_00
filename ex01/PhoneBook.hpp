@@ -3,18 +3,20 @@
 
 #define MAX 8
 
+#include <string>
+
 #include "Contact.hpp"
 
 class PhoneBook {
     private:
-        Contact contact[MAX];
         int index;
+        Contact contact[MAX];
 
     public:
         PhoneBook(void);
         ~PhoneBook(void);
-        void add();
-        void search();
+		void	updateContact(const Contact &contact);
+		void	printPhoneBook(void);
 };
 
 #endif
