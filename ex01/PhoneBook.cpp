@@ -11,7 +11,7 @@ PhoneBook::~PhoneBook(void) {
 	std::cout << "Destroy PhoneBook..." << std::endl;
 }
 
-static	std::string	getStringShort(std::string str){
+static	std::string	getStringShort(std::string str) {
 	if (10 <= str.length()){
 		str = str.substr(0, 9);
 		str += ".";
@@ -19,7 +19,7 @@ static	std::string	getStringShort(std::string str){
 	return str;
 }
 
-static void	printTableRow(void){
+static void	printTableRow(void) {
 	std::cout << '|' << std::setw(10) << std::right << "index" << '|'
 			<< std::setw(10) << "First Name" << '|' << std::setw(10)
 			<< "Last Name" << '|' << std::setw(10) << "Nickname" << '|'
@@ -39,17 +39,16 @@ void	PhoneBook::printPhoneBook() {
 	printTableRow();
 	for (int i = 0; i < max; i++)
 		printTableRow(i, contact[i]);
-
 	std::cout << "[SEARCH] Enter index : ";
 	std::string cmd;
 	std::getline(std::cin, cmd);
 	if (1 < cmd.size() || cmd[0] < '1' || '8' < cmd[0])
 		std::cout << "Invalid index" << std::endl;
-	else{
+	else {
 		int index = cmd[0] - '0' - 1;
 		if (max <= index)
 			std::cout << "Invalid index" << std::endl;
-		else{
+		else {
 			std::cout << "First Name: " << contact[index].getFirstName() << std::endl;
       		std::cout << "Last Name: " << contact[index].getLastName() << std::endl;
       		std::cout << "Nickname: " << contact[index].getNickname() << std::endl;
@@ -59,7 +58,7 @@ void	PhoneBook::printPhoneBook() {
 	}
 }
 
-void	PhoneBook::updateContact(const Contact& newContact){
+void	PhoneBook::updateContact(const Contact& newContact) {
 	contact[index % MAX] = newContact;
 	index += 1;
 	if (MAX * 2 <= index)
