@@ -47,7 +47,8 @@ int	main(void)
 				phoneBook.updateContact(contact);
 			}
 			else if (cmd.compare("SEARCH") == 0){
-				phoneBook.printPhoneBook();
+				if (!phoneBook.printPhoneBook())
+					run = false;
 			}
 			else if (cmd.compare("EXIT") == 0)
 				break;

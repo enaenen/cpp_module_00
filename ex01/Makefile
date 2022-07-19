@@ -11,10 +11,10 @@ $(NAME)	: $(OBJS)
 
 all		: $(NAME)
 
-clean	: clean
+clean	: 
 			@rm -rf $(OBJ)
 
-fclean	:
+fclean	:	clean
 			@rm -rf $(NAME)
 
 re		: fclean
