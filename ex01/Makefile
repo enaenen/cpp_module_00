@@ -1,23 +1,4 @@
-NAME = phonebook
-CXX = clang++
-CXXFLAG = -Wall -Wextra -Werror -std=c++98
+TARGET = phonebook
 SRCS = PhoneBook.cpp Contact.cpp main.cpp
-OBJ = $(SRCS:.cpp=.o)
 
-OBJS	= ${SRCS:%.cpp=%.o}
-
-$(NAME)	: $(OBJS)
-	@$(CXX) $(CXXFLAGS) $(OBJS) -o $@ 
-
-all		: $(NAME)
-
-clean	: 
-			@rm -rf $(OBJ)
-
-fclean	:	clean
-			@rm -rf $(NAME)
-
-re		: fclean
-		make all
-
-.PHONY	: all clean fclean re
+include ../template.mk

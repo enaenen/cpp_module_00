@@ -2,7 +2,8 @@
 
 #define MEGAPHONE_MSG "* LOUD AND UNBEARABLE FEEDBACK NOISE *"
 
-int	main(int argc, char **argv){
+int	main(int argc, char **argv)
+{
 	std::string str;
 	if (1 < argc)
 	{
@@ -10,7 +11,7 @@ int	main(int argc, char **argv){
 		{
 			std::string input(argv[i]);
 			for (std::size_t j = 0; j < input.length(); j++)
-				str += toupper(input[j]);
+				str += std::toupper(input[j]);
 		}
 	}
 	else

@@ -2,7 +2,8 @@
 
 #include <string>
 
-class Contact {
+class Contact 
+{
     private:
         std::string firstName;
         std::string lastName;

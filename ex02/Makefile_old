@@ -1,7 +1,7 @@
-NAME = testing
+NAME = Account
 CXX = c++
-CXXFLAG = -Wall -Wextra -Werror -std=c++98
-SRCS = getlineTest.cpp
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+SRCS = Account.cpp tests.cpp
 OBJ = $(SRCS:.cpp=.o)
 
 OBJS	= ${SRCS:%.cpp=%.o}
@@ -11,10 +11,10 @@ $(NAME)	: $(OBJS)
 
 all		: $(NAME)
 
-clean	: clean
+clean	: 
 			@rm -rf $(OBJ)
 
-fclean	:
+fclean	: clean
 			@rm -rf $(NAME)
 
 re		: fclean

@@ -1,7 +1,7 @@
-NAME = testing
+NAME = megaphone
 CXX = c++
-CXXFLAG = -Wall -Wextra -Werror -std=c++98
-SRCS = getlineTest.cpp
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+SRCS = megaphone.cpp
 OBJ = $(SRCS:.cpp=.o)
 
 OBJS	= ${SRCS:%.cpp=%.o}

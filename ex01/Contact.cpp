@@ -11,19 +11,26 @@ Contact::Contact(void){};
      this->darkestSecret = darkestSecret;
  };
  
- std::string Contact::getFirstName(void){
+ std::string Contact::getFirstName(void)
+ {
      return firstName;
-     };
- std::string Contact::getLastName(void){ 
+ }
+
+ std::string Contact::getLastName(void)
+ { 
      return lastName;
-     };
- std::string Contact::getNickname(void){
+ }
+ std::string Contact::getNickname(void)
+ {
      return nickname;
-     };
- std::string Contact::getPhoneNumber(void){
+ }
+
+ std::string Contact::getPhoneNumber(void)
+ {
      return phoneNumber;
-     };
- std::string Contact::getDarkestSecret(void){
+ }
+ std::string Contact::getDarkestSecret(void)
+ {
      return darkestSecret;
-     };  
+ }  
  

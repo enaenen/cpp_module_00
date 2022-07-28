@@ -1,7 +1,8 @@
 #include "PhoneBook.hpp"
 #include <iostream>
 
-Contact getContact(void) {
+Contact getContact(void) 
+{
   std::cout << "First Name: ";
   std::string firstName;
   std::getline(std::cin, firstName);
@@ -21,7 +22,8 @@ Contact getContact(void) {
   return contact;
 }
 
-static void string_to_uppercase(std::string& str){
+static void string_to_uppercase(std::string& str)
+{
 	for (std::string::iterator it = str.begin(); it != str.end(); it++)
 		*it = std::toupper(*it);
 }
@@ -57,8 +59,7 @@ int	main(void)
 		}
 		else
 			run = false;
-}
+	}
 	std::cout << "Program Ended!" << std::endl;
 	return (0);
-
 }
