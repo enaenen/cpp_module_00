@@ -28,7 +28,7 @@ re : clean; make all
 $(OBJS_DIR):
 	mkdir -p $(OBJS_DIR)
 
-$(OBJS): $(OBJS_DIR)
+$(OBJS): |$(OBJS_DIR)
 
 $(addprefix $(OBJS_DIR), %.o): %.cpp
 	$(CXX) -c $< -o $@ $(CXXFLAGS)
