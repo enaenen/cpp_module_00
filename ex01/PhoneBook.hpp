@@ -15,5 +15,5 @@ class PhoneBook {
         PhoneBook(void);
         ~PhoneBook(void);
 		void	updateContact(const Contact &contact);
-		bool	printPhoneBook(void);
+		void	printPhoneBook(void);
 };

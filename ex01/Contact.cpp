@@ -1,6 +1,9 @@
 #include "Contact.hpp"
 
-Contact::Contact(void){};
+Contact::Contact(void)
+{
+    
+}
 
  Contact::Contact(std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string darkestSecret)
  {
@@ -9,7 +12,7 @@ Contact::Contact(void){};
      this->nickname = nickname;
      this->phoneNumber = phoneNumber;
      this->darkestSecret = darkestSecret;
- };
+ }
  
  std::string Contact::getFirstName(void)
  {
@@ -29,8 +32,33 @@ Contact::Contact(void){};
  {
      return phoneNumber;
  }
+
  std::string Contact::getDarkestSecret(void)
  {
      return darkestSecret;
+ }  
+
+ void Contact::setFirstName(std::string input)
+ {
+     this->firstName = input;
+ }
+
+  void Contact::setLastName(std::string input)
+ { 
+     this->lastName = input;
+ }
+  void Contact::setNickname(std::string input)
+ {
+     this->nickname = input;
+ }
+
+  void Contact::setDarkestSecret(std::string input)
+ {
+     this->darkestSecret = input;
+  }
+
+  void Contact::setPhoneNumber(std::string input)
+ {
+     this->phoneNumber = input;
  }  
  

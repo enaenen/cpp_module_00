@@ -40,7 +40,7 @@ static void printTableRow(int index, Contact contact)
             << '|' << std::endl;
 }
 
-bool	PhoneBook::printPhoneBook() 
+void	PhoneBook::printPhoneBook(void) 
 {
 	int max = (index < MAX) ? index : MAX;
 	printTableRow();
@@ -49,17 +49,18 @@ bool	PhoneBook::printPhoneBook()
 	std::cout << "[SEARCH] Enter index : ";
 	std::string cmd;
 	std::getline(std::cin, cmd);
-	if (cmd.empty()){
-		std::cout << "Invalid index" << std::endl;
-		return true;
+	if (cmd.empty())
+	{
+		std::cout << "Invalid index" << std::endl << std::endl;
+		return ;
 	}
 	if (1 < cmd.size() || cmd[0] < '1' || '8' < cmd[0])
-		std::cout << "Invalid index" << std::endl;
+		std::cout << "Invalid index" << std::endl << std::endl;
 	else 
 	{
 		int index = cmd[0] - '0' - 1;
 		if (max <= index)
-			std::cout << "Invalid index" << std::endl;
+			std::cout << "Invalid index" << std::endl << std::endl;
 		else 
 		{
 			std::cout << "First Name: " << contact[index].getFirstName() << std::endl;
@@ -69,7 +70,7 @@ bool	PhoneBook::printPhoneBook()
       		std::cout << "Darkest Secret: " << contact[index].getDarkestSecret() << std::endl;
 		} 
 	}
-	return true;
+	return ;
 }
 
 void	PhoneBook::updateContact(const Contact& newContact) 

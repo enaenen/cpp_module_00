@@ -18,4 +18,9 @@ class Contact
         std::string getNickname(void);
         std::string getPhoneNumber(void);
         std::string getDarkestSecret(void);
+        void setFirstName(std::string input);
+        void setLastName(std::string input);
+        void setNickname(std::string input);
+        void setPhoneNumber(std::string input);
+        void setDarkestSecret(std::string input);
 };
