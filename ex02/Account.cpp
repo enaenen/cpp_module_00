@@ -79,8 +79,8 @@ void Account::displayStatus( void ) const
 void Account::makeDeposit(int deposit)
 {
 	const	int p_amount = _amount;
-    if (deposit <= 0)
-        return ;
+	if (deposit <= 0)
+		return ;
 	_totalAmount += deposit;
 	_amount += deposit;
 	_nbDeposits++;
