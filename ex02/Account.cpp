@@ -49,10 +49,10 @@ int	Account::getNbWithdrawals(void) { return _totalNbWithdrawals; }
 
 void Account::_displayTimestamp(void) 
 {
-    std::time_t t;
-    std::time(&t);
+    time_t t;
+    time(&t);
     char buf[1024];
-    std::strftime(buf, sizeof(buf), "[%Y%m%d_%H%M%S] ", std::localtime(&t));
+    strftime(buf, sizeof(buf), "[%Y%m%d_%H%M%S] ", localtime(&t));
     std::cout << buf;
 }
 
@@ -78,9 +78,9 @@ void Account::displayStatus( void ) const
 
 void Account::makeDeposit(int deposit)
 {
+	const	int p_amount = _amount;
     if (deposit <= 0)
         return ;
-	const int p_amount = _amount;
 	_totalAmount += deposit;
 	_amount += deposit;
 	_nbDeposits++;
