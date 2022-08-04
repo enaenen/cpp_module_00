@@ -17,6 +17,5 @@ int	main(int argc, char **argv)
 	else
 		str = MEGAPHONE_MSG;
 	std::cout << str << std::endl;
-
 	return (0);
 }
