@@ -7,13 +7,13 @@
 #include "Contact.hpp"
 
 class PhoneBook {
-    private:
-        int index;
-        Contact contact[MAX];
+ private:
+  int index;
+  Contact contact[MAX];
 
-    public:
-        PhoneBook(void);
-        ~PhoneBook(void);
-		void	updateContact(const Contact &contact);
-		void	printPhoneBook(void);
+ public:
+  PhoneBook(void);
+  ~PhoneBook(void);
+  void updateContact(const Contact &contact);
+  void printPhoneBook(void);
 };
