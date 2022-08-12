@@ -14,7 +14,7 @@ static std::string getStringShort(std::string str) {
     str = str.substr(0, 9);
     str += ".";
   }
-  return str;
+  return (str);
 }
 
 static void printTableRow(void) {
